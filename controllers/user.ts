@@ -75,12 +75,12 @@ const DeleteController = async (req:Request,res:Response) : Promise < Response >
     return res.status( result.status ).json( result.response )
 }
 //////////////////////////////////////////////////////////////////////////////////////////
-const Index  = async (req:Request,res:Response) : Promise < Response > => {
+const ReportController  = async (req:Request,res:Response) : Promise < Response > => {
 
     return res.end()
 }
 //////////////////////////////////////////////////////////////////////////////////////////
-const ChangePassword = async (req:Request,res:Response) : Promise < Response > =>  {
+const ChangePasswordController = async (req:Request,res:Response) : Promise < Response > =>  {
 
     const { login,password,newpassword } = req.body
 
@@ -113,5 +113,5 @@ const ChangePassword = async (req:Request,res:Response) : Promise < Response > =
     else return res.status( 400 ).json( {message:"Error De Tipo No Esperado"} ) 
 }
 //////////////////////////////////////////////////////////////////////////////////////////
-export { CreateController,ReadController,UpdateController,DeleteController,ChangePassword }
+export { CreateController,ReadController,UpdateController,DeleteController,ReportController,ChangePasswordController }
 //////////////////////////////////////////////////////////////////////////////////////////

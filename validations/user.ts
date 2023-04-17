@@ -19,7 +19,14 @@ const UpdateValidations = [
     (req:Request,resp:Response,next:NextFunction) => Handler(req,resp,next)
 ]
 //////////////////////////////////////////////////////////////////////////////////////////
-export { CreateValidations,UpdateValidations }
+const ChangePassValidations = [
+    check('name').not().isEmpty(),
+    check('email').not().isEmpty(),
+    check('phone').not().isEmpty(),
+    (req:Request,resp:Response,next:NextFunction) => Handler(req,resp,next)
+]
+//////////////////////////////////////////////////////////////////////////////////////////
+export { CreateValidations,UpdateValidations,ChangePassValidations }
 //////////////////////////////////////////////////////////////////////////////////////////
 
 

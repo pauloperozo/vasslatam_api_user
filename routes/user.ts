@@ -1,9 +1,8 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 import { Router }  from 'express'
-import { CreateValidations,UpdateValidations } from '../validations/user'
-import { CreateController,UpdateController,ReadController,DeleteController } from '../controllers/user'
+import { CreateValidations,UpdateValidations,ChangePassValidations } from '../validations/user'
+import { CreateController,UpdateController,ReadController,DeleteController,ReportController,ChangePasswordController } from '../controllers/user'
 import Authorization  from '../middleware/authorization'
-
 //////////////////////////////////////////////////////////////////////////////////////////
 const router = Router()
 
@@ -14,7 +13,8 @@ router.put('/:UserId',Authorization,UpdateValidations,UpdateController)
 router.delete('/:UserId',Authorization,DeleteController)
 
 /*Otras Funciones */
-
+router.get('/',Authorization,ReportController)
+router.put('/',Authorization,ChangePassValidations,ChangePasswordController)
 
 
 //////////////////////////////////////////////////////////////////////////////////////////
