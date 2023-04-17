@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "b5298569-e7bd-4236-b40f-ccc3aa60abac",
+		"name": "vasslatam_api_user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4981998"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "paulo",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "pauloperozocolombia@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "3208884833",
+									"type": "text"
+								},
+								{
+									"key": "login",
+									"value": "paulo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign In",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "login",
+									"value": "paulo",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NDNjNzMyMjM4MjJiNTdjMzE5MDllYjUiLCJjcmVhdGVBdCI6IjIwMjMtMDQtMTYgMTc6MTQ6NDQiLCJpYXQiOjE2ODE2ODMyODQsImV4cCI6MTY4MTcyNjQ4NH0.eesp9XmkuQcKT1uRUv3-bNPM08H9Wfg8fWasT6O7Qwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mayla",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "Mayla@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "3208884833",
+									"type": "text"
+								},
+								{
+									"key": "login",
+									"value": "mayla",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NDNjNzMyMjM4MjJiNTdjMzE5MDllYjUiLCJjcmVhdGVBdCI6IjIwMjMtMDQtMTYgMTc6MTQ6NDQiLCJpYXQiOjE2ODE2ODMyODQsImV4cCI6MTY4MTcyNjQ4NH0.eesp9XmkuQcKT1uRUv3-bNPM08H9Wfg8fWasT6O7Qwo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/user/:UserId",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								":UserId"
+							],
+							"variable": [
+								{
+									"key": "UserId",
+									"value": "643c73763822b57c31909eba"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NDNjNzMyMjM4MjJiNTdjMzE5MDllYjUiLCJjcmVhdGVBdCI6IjIwMjMtMDQtMTYgMTc6MTQ6NDQiLCJpYXQiOjE2ODE2ODMyODQsImV4cCI6MTY4MTcyNjQ4NH0.eesp9XmkuQcKT1uRUv3-bNPM08H9Wfg8fWasT6O7Qwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "mayla",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mayla@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "3208884833",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/:UserId",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								":UserId"
+							],
+							"variable": [
+								{
+									"key": "UserId",
+									"value": "643c73763822b57c31909eba"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NDNjNzMyMjM4MjJiNTdjMzE5MDllYjUiLCJjcmVhdGVBdCI6IjIwMjMtMDQtMTYgMTc6MTQ6NDQiLCJpYXQiOjE2ODE2ODMyODQsImV4cCI6MTY4MTcyNjQ4NH0.eesp9XmkuQcKT1uRUv3-bNPM08H9Wfg8fWasT6O7Qwo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/user/:UserId",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								":UserId"
+							],
+							"variable": [
+								{
+									"key": "UserId",
+									"value": "643c73763822b57c31909eba"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NDNjNzMyMjM4MjJiNTdjMzE5MDllYjUiLCJjcmVhdGVBdCI6IjIwMjMtMDQtMTYgMTc6MTQ6NDQiLCJpYXQiOjE2ODE2ODMyODQsImV4cCI6MTY4MTcyNjQ4NH0.eesp9XmkuQcKT1uRUv3-bNPM08H9Wfg8fWasT6O7Qwo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/api/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChagePassword",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiI2NDNjNzMyMjM4MjJiNTdjMzE5MDllYjUiLCJjcmVhdGVBdCI6IjIwMjMtMDQtMTYgMTc6MTQ6NDQiLCJpYXQiOjE2ODE2ODMyODQsImV4cCI6MTY4MTcyNjQ4NH0.eesp9XmkuQcKT1uRUv3-bNPM08H9Wfg8fWasT6O7Qwo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "mayla",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mayla@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "3208884833",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/:UserId",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								":UserId"
+							],
+							"variable": [
+								{
+									"key": "UserId",
+									"value": "643c73763822b57c31909eba"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

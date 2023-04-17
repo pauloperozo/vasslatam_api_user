@@ -1,6 +1,6 @@
 /////////////////////////////////////////////////////////////
 const supertest = require('supertest')
-const app = require('../build/app.js')
+const app = require('../build/app')
 const request = supertest(app)
 /////////////////////////////////////////////////////////////
 describe("Servidor Activo",() => {
