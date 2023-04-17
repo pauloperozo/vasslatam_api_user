@@ -76,8 +76,11 @@ const DeleteController = async (req:Request,res:Response) : Promise < Response >
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 const ReportController  = async (req:Request,res:Response) : Promise < Response > => {
-
-    return res.end()
+    /*OwnerId Es UserId Manager de las subcuentas*/
+    const OwnerId : string = res.locals.session.UserId
+    const filter = Object.assign({OwnerId}, req.query ) /* Agregamos otros filtros apartir del usuario dueño/creador */
+    const result = await UserProcedure.FindAll( filter )
+    return res.status( result.status ).json( result.response )
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 const ChangePasswordController = async (req:Request,res:Response) : Promise < Response > =>  {
