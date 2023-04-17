@@ -115,12 +115,12 @@ const Delete =  async ( data : UserDelete ) :  Promise < ResponseInterface > => 
     }
 }
 /////////////////////////////////////////////////////////
-const FindAll = async () : Promise < ResponseInterface > => {
+const FindAll = async ( data :Object ) : Promise < ResponseInterface > => {
  
     try {   
 
          /*Buscar Todas Las Entidades */
-         const users = await User.find()
+         const users = await User.find( data )
          return { status:200,response: users }   
 
     } 
@@ -128,7 +128,6 @@ const FindAll = async () : Promise < ResponseInterface > => {
 
         console.error(error)
         return {status:500,response:{ message:"Problema al Buscar"}}
-
     }
     
 }
