@@ -115,7 +115,7 @@
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "Mayla",
+									"value": "Maylassss",
 									"type": "text"
 								},
 								{
@@ -130,7 +130,7 @@
 								},
 								{
 									"key": "login",
-									"value": "mayla",
+									"value": "mayla2",
 									"type": "text"
 								},
 								{
@@ -202,7 +202,7 @@
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "mayla",
+									"value": "mayla bautista",
 									"type": "text"
 								},
 								{
@@ -282,7 +282,7 @@
 							}
 						],
 						"url": {
-							"raw": "localhost:3000/api/user",
+							"raw": "localhost:3000/api/user?name=Mayla",
 							"host": [
 								"localhost"
 							],
@@ -290,6 +290,12 @@
 							"path": [
 								"api",
 								"user"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Mayla"
+								}
 							]
 						}
 					},
